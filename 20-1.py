@@ -6,7 +6,7 @@ def main():
     max_num = 10 ** (prime_digit) - 1
     primes = make_primes(max_num)
 
-    with open('pi.txt', 'r') as fi:
+    with open('20-pi.txt', 'r') as fi:
         pi = fi.readline()
 
     for i in xrange(len(pi) - prime_digit + 1):
