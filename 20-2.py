@@ -1,6 +1,7 @@
 #! /usr/bin/python
 # coding:utf-8
 
+
 def main():
     prime_digit = 10
     max_num = 10 ** (prime_digit) - 1
@@ -10,7 +11,7 @@ def main():
         pi = fi.readline()
 
     for i in xrange(len(pi) - prime_digit + 1):
-        num = int(pi[i:i + prime_digit])
+        num = int(pi[i: i + prime_digit])
         if check_prime(num, primes):
             print 'FLAG_Q20_' + str(num)
             break
@@ -18,8 +19,8 @@ def main():
 
 def make_primes(max_num):
     prime_max = int(float(max_num)**0.5)
-    nums = {2 : True}
-    nums.update({i : True for i in xrange(3, prime_max + 1, 2)})
+    nums = {2: True}
+    nums.update({i: True for i in xrange(3, prime_max + 1, 2)})
     i = 1
     for num in sorted(nums):
         if num in nums:

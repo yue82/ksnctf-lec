@@ -1,6 +1,7 @@
 #! /usr/bin/python
 # coding:utf-8
 
+
 def main():
     prime_digit = 10
     max_num = 10 ** (prime_digit) - 1
