@@ -19,8 +19,8 @@ def main():
 
 def make_primes(max_num):
     prime_max = int(float(max_num)**0.5)
-    nums = {2: True}
-    nums.update({i: True for i in xrange(3, prime_max + 1, 2)})
+    nums = {2}
+    nums.update({i for i in xrange(3, prime_max + 1, 2)})
     i = 1
     for num in sorted(nums):
         if num in nums:
@@ -30,7 +30,7 @@ def make_primes(max_num):
             if num in nums:
                 del(nums[mulnum])
 
-    return [num for num in nums.keys()]
+    return [num for num in nums]
 
 
 def check_prime(num, primes):
